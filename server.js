@@ -46,7 +46,7 @@ io.on('connection', (socket) => {
       const user = users.find(userId => userId.id === socket.id)
       const index = users.indexOf(user);
       users.splice(index, 1);
-      socket.broadcast.emit('message', {author: 'Chat Bo', content: `${user.name} has left the conversation... :(`})
+      socket.broadcast.emit('message', {author: 'Chat Bot', content: `${user.name} has left the conversation... :(`})
     });
     console.log('I\'ve added a listener on message event \n');
 });
